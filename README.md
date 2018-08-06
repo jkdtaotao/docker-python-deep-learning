@@ -37,7 +37,7 @@
 docker run -it --name deep-learning \
            -v $(PWD):/home/notebooks \
            -p 8888:8888 -d \
-           petronetto/docker-python-deep-learning
+           scotang/docker-python-deep-learning
 ```
 
 
