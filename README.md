@@ -30,7 +30,7 @@
 - PyTorch
 - Torch Vision
 - Jupyter Notebook
-
+- Tushare
 ## Running the container
 
 ```sh
