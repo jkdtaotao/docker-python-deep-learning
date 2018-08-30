@@ -1,0 +1,25 @@
+version: '3'
+services:
+  scott-stock:
+    build: .
+    links:
+     - db:mysql
+    ports:
+     - "8888:8888"
+    volumes:
+     - ./mysql-db:/mysql-db
+    tty: true
+    stdin_open: true
+    restart: always
+  db:
+    image: mysql:latest
+    ports:
+      - "33066:3306"
+    volumes:
+     - ./data/db:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: stock
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpwd
