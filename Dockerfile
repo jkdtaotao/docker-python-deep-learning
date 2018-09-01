@@ -84,6 +84,7 @@ ENV BUILD_PACKAGES="\
         tushare \
         plotly \
         mpl_finance \
+        pymysql \
         BeautifulSoup4" \
     PYTHON_VERSION=3.6.4 \
     PATH=/usr/local/bin:$PATH \

@@ -1,25 +1,16 @@
 version: '3'
 services:
   deep-learn:
-    build: .
-    volumes:
-      - ./code:/code
-    depends_on:
-     - deep-learn
-    ports:
-     - "8888:8888"
-    tty: true
-    stdin_open: true
-    restart: always
-  deep-learn:
     image: scotang/docker-python-deep-learning:latest
     depends_on:
      - db
     ports:
      - "8888:8888"
-#    tty: true
-#    stdin_open: true
-#    restart: always
+    tty: true
+    stdin_open: true
+    restart: always
+    environment:
+      DB_HOST: db:3306
   db:
     image: mysql:latest
     ports:
